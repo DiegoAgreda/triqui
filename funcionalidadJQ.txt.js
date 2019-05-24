@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".moverImagen").draggable();
+    $(".moverImagen").draggable({revert: "valid"});
  
     $("#cuadro1").droppable({
         
@@ -17,9 +17,10 @@ $(document).ready(function(){
             if ($("#cuadro2").html()==""){
             ui.draggable.addClass("dropped");
             $(this).append(ui.draggable);
+            }
         }
-    }
-});
+    });
+
 $("#cuadro3").droppable({
         
     drop: function (event, ui) {
